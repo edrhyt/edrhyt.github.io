@@ -1,8 +1,7 @@
-/* File Name  : style.css
+/* File Name  : style.scss
 Descripttion  : Cascading Style Sheet for Edi Ruhiat website.
 Author        : Edi Ruhiat
 Author URI    : www.ediruhiat.com */
-
 /* This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -15,12 +14,15 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>. */
-
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
 }
 
 html {
@@ -982,6 +984,22 @@ footer i {
   color: #ce1717;
 }
 
+/* File Name  : _responsive.scss
+Descripttion  : Responsive Cascading Style Sheet for Edi Ruhiat website.
+Author        : Edi Ruhiat
+Author URI    : www.ediruhiat.com */
+/* This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. */
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;

@@ -53,6 +53,22 @@ const brandHover = () => {
     
 }
 
+const sendWhatsApp = () => {
+    const message = document.getElementById('wa-direct');
+    const sendButton = document.querySelector('.wa-send');
+    const href = sendButton.parentElement;
+    
+    let finalMessage = message.value;
+    let waUrl = "https://wa.me/6281293626948/?text="+finalMessage;
+
+    sendButton.addEventListener('click', (e) => {
+        finalMessage = message.value;
+        waUrl = "https://wa.me/6281293626948/?text="+finalMessage;
+        href.setAttribute('href', waUrl);
+    });
+}
+
 load();
 brandHover();
 navSlide();
+sendWhatsApp();
