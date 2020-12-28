@@ -1,0 +1,239 @@
+/* File Name  : _responsive.scss
+Descripttion  : Responsive Cascading Style Sheet for Edi Ruhiat website.
+Author        : Edi Ruhiat
+Author URI    : www.ediruhiat.com */
+
+/* This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+
+@media screen and (max-width: 768px){
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        .just-abar {
+            div {
+                i {
+                    font-size: 12px;
+                }
+    
+                .link-to {
+                    font-size: 8px;
+                }
+            }
+        }
+
+        .sticky {
+            position: fixed;
+        }
+
+        nav {
+            transition: all 0.3s ease;
+
+            .brand {
+                cursor: default;
+            }
+
+            .nav-links {
+                position: absolute;
+                right: 0px;
+                height: 90vh;
+                width: 60vw;
+                top: 10vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                transform: translateX(120%);
+                transition: transform 0.3s ease;
+                background-color: #161b24;
+                box-shadow: -6px 6px 8px rgba($color: black, $alpha: 0.5);
+                border-left: 1px solid rgb(51, 51, 51);
+                z-index: 2;
+
+                li {
+                    opacity: 0;
+                }
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav-active {
+                transform: translateX(0%);
+            }            
+
+            .toggle .b-1 {
+                transform: rotate(-45deg) translate(-5px, 5px);
+            }
+    
+            .toggle .b-2 {
+                transform: translateX(100%);
+                width: 0;
+                opacity: 0;
+            }
+    
+            .toggle .b-3 {
+                transform: rotate(45deg) translate(-5px, -5px);
+            }    
+
+            @keyframes navLinkFade {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0px);
+
+                }
+            }
+
+        }
+    }
+
+    main {
+        section#about {
+
+            .container.offer {
+                flex-direction: column;
+                margin-bottom: 0;
+
+                div.col-4 {
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 1rem;
+
+                    div.card {
+
+                        .column-text h2 {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .container.work-feature {
+                
+                h3.txt-right {
+                    text-align: left;
+                }
+
+                div.collaborative, div.revision, div.test {
+                    display: block;
+                    text-align: left;                    
+
+                    img {
+                        width: 100%;
+                        margin-top: 2rem;
+                    }
+
+                    p {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        section#projects {
+            display: none;
+            div.container {
+                grid-template-columns: 1fr;
+
+                .grid-item {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 250px;
+                    height: 100%;
+                    min-width: 0;
+                    width: 100%;
+
+                    &.p-1 {
+                        grid-row: 1/2;
+                        grid-column: 1;
+
+                        .container-img {
+    
+                            img {
+                                width: 100%;
+                                padding: 1px;
+                                border-radius: 7px 7px 0 0;
+                                border-bottom: 1px solid rgb(79,79,79);
+                            }
+                        }
+
+                        .container-detail {
+                            position: relative;
+                        }
+                    }
+                    &.p-2 {
+                        grid-row: 2/3;
+                        grid-column: 1;
+                    }
+                    &.p-3 {
+                        grid-row: 3/4;
+                        grid-column: 1;
+                    }
+                    &.p-4 {
+                        flex-direction: column;
+                        grid-row: 4/5;
+                        grid-column: 1;
+                    }
+                }
+            }
+        }
+
+        section#contact {
+            padding-bottom: 5rem;
+            div.container {
+                flex-direction: column;
+                padding: 0;
+
+                div.col-3.img-container {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 70%;
+                    }
+                }
+
+                div.col-4.bio {
+                    width: 100%;
+                }
+
+                div.col-5.contact {
+                    padding: 0 9%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    footer {
+        .copyright {
+            ul {
+                font-size: 8px;
+            }
+        }
+
+        h5, i {
+            font-size: 8px;
+        }
+    }
+}
